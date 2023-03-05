@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome {{logged_user.first_name}}</h1>
+    <a href="/dashboard">Back to Recipes</a>
+    <a href="/users/logout">Log Out</a>
+    <h1>{{one_recipe.name}}</h1>
+    <h4>Posted by: {{one_recipe.writer.first_name}}</h4>
+    <p>Description: {{one_recipe.description}}</p>
+    <p>Under 30 Minutes: {%if one_recipe.under_30 == 1%} Yes {%else%} No {%endif%}</p>
+    <p>Instructions: {{one_recipe.instructions}}</p>
+    <p>Date Made: {{one_recipe.date_cooked}}</p>
+</body>
+</html>
